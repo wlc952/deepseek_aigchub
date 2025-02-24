@@ -9,15 +9,15 @@ if (NOT DEFINED TYPE)
     set(TYPE "default")
 endif()
 
-include_directories(${PROJECT_SOURCE_DIR}/../../../support/include)
+include_directories(${PROJECT_SOURCE_DIR}/../support/include)
 
 if (${CMAKE_HOST_SYSTEM_PROCESSOR} STREQUAL "aarch64")
     add_definitions(-DSOC_TARGET)
-    link_directories(${PROJECT_SOURCE_DIR}/../../../support/lib_soc)
+    link_directories(${PROJECT_SOURCE_DIR}/../support/lib_soc)
     message("SoC mode, starting......")
 elseif (${TARGET_ARCH} STREQUAL "pcie")
     add_definitions(-DPCIE_TARGET)
-    link_directories(${PROJECT_SOURCE_DIR}/../../../support/lib_pcie)
+    link_directories(${PROJECT_SOURCE_DIR}/../support/lib_pcie)
     message("PCIE mode, starting......")
 endif()
 
