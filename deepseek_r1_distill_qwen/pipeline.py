@@ -9,7 +9,7 @@ import torch
 import sys
 try: 
     import repo.deepseek.deepseek_r1_distill_qwen.chat as chat
-except :
+except:
     import chat
 
 class Model:
