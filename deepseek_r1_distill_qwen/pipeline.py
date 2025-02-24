@@ -7,7 +7,10 @@ from transformers import AutoTokenizer, AutoProcessor
 import torch
 
 import sys
-import chat
+try: 
+    import repo.deepseek.deepseek_r1_distill_qwen.chat as chat
+except :
+    import chat
 
 class Model:
     def __init__(self, args):
